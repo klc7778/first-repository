@@ -7,33 +7,42 @@ namespace SplatWorld
         static void Main(string[] args)
         {
             /*
-             * Initialize an array
+             * For loops biotch
              */
 
-            int[] grades = new int[5];
+            int[] nums = new int[10];
 
-            grades[0] = 20;
-            grades[1] = 100;
-            grades[2] = 55;
-            grades[3] = 78;
-            grades[4] = 98;
-
-            Console.WriteLine("Grades at index 0: {0} ", grades[0]);
+            for(int i=0; i < 10; i++)
+            {
+                nums[i] = i+8;
             
+            }
 
-            string input = Console.ReadLine();
-            grades[0] = int.Parse(input);
-            Console.WriteLine("Grades at index 0: {0} ", grades[0]);
-            Console.ReadKey();
+            for (int j = 0; j < nums.Length; j++)
+            {
+                Console.WriteLine("Element[0] = {1}", j, nums[j]);                
+            }
 
-
-            /*Single line array declaration
+            /* value of K at position in nums
              */
-            int[] gradesInClassA = { 65, 78, 90, 89, 99 };
+            int counter = 0; 
+            foreach (int k in nums)
+            {
+                Console.WriteLine("Element[0] = {1}", counter, k);
+                counter++;
+            }
+            /* 
+             * create array of 5 names,
+             * and foreach loop to greet all of them */
 
-            int[] gradesInClassB = new int[] { 56, 33, 100, 54, 88 };
+            string[] friends = new string[]{ "Tommy", "Ghost", "Tasha", "Ja'Net", "Mi'Kael" };
 
-            Console.WriteLine("Length of grades in class A: {0} ", gradesInClassA.Length);
+            foreach(string f in friends)
+            {
+                Console.WriteLine("Greetings = {1}!", counter, f);
+                counter++;
+            }
+
             Console.ReadKey(); 
         }
     }
